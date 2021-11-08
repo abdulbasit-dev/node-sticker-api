@@ -1,14 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-require('dotenv').config();
-const logger = require('./middlewares/logger');
+require('dotenv').config()
 
-const testRoutes = require('./routes/test');
+//import routes
+const stickerRoutes = require('./routes/stickerRoutes');
 
 //create app
 const app = express();
-const port = process.env.PORT || 8000
-app.use(bodyParser.json())
+const port = process.env.PORT || 5000;
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
 
 // COSR handler
 app.use((req, res, next) => {
@@ -22,13 +27,13 @@ app.use((req, res, next) => {
 });
 
 //Middllewares
-app.use(logger);
+// app.use(logger);
 
 //ROUETS
-app.get('/',(req,res)=>{
-  return res.json(["hello from nodejs server"])
-})
+app.get('/', (req, res) => {
+  return res.json(['hello from nodejs server']);
+});
 
-app.use('/test',testRoutes)
+app.use('/stickers', stickerRoutes);
 
-app.listen(port, ()=>console.log(`server run on port ${port}`))
+app.listen(port, () => console.log(`server run on port ${port}`));
