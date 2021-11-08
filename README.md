@@ -17,6 +17,17 @@ the project use mysql but you can install other database driver to it here is th
 ```bash
   git clone https://github.com/abdulbasit-dev/node-knex-boilerplate.git <your-prefer-folder-name>
 ```
+
+- remove remote origin and put your remote repository
+
+```bash
+  git remote remove origin
+```
+
+```bash
+  git remote add <your-remote>
+```
+
 - install dependencies
 
 ```bash
