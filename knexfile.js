@@ -3,13 +3,13 @@
 module.exports = {
   development: {
     //it has to be here not in the .env file
-    client: 'mysql',
+    client: process.env.DB_CONNECTION,
     connection: {
       host: process.env.DB_HOST,
       port:process.env.DB_PORT,
-      user: 'root',
+      user: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
-      database:'node_stickers-api',
+      database: process.env.DB_DATABASE,
     },
     pool: {
       min: 0,
