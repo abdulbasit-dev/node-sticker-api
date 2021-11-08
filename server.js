@@ -7,7 +7,7 @@ const testRoutes = require('./routes/test');
 
 //create app
 const app = express();
-const port = process.env.PORT || PORT
+const port = process.env.PORT || 8000
 app.use(bodyParser.json())
 
 // COSR handler
