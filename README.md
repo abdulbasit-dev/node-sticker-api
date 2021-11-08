@@ -3,10 +3,8 @@
 
 
 
-# Node.js + knex.js(mysql) boilerplate
-
-this a boilerplate for someone whe went to use nodejs with knex. <br/>
-the project use mysql but you can install other database driver to it here is the refrense for others drivers https://knexjs.org/#Installation-client
+# Sticker app
+a simple crud about sicker
 
 
 ## Installation
@@ -15,19 +13,9 @@ the project use mysql but you can install other database driver to it here is th
 - clone project
 
 ```bash
-  git clone https://github.com/abdulbasit-dev/node-knex-boilerplate.git <folder-name>
+  git clone https://github.com/abdulbasit-dev/node-sticker-api.git
+  cd node-sticker-api
 ```
-
-- remove remote origin and put your remote repository
-
-```bash
-  git remote remove origin
-```
-
-```bash
-  git remote add <your-remote>
-```
-
 - install dependencies
 
 ```bash
@@ -40,6 +28,16 @@ the project use mysql but you can install other database driver to it here is th
 ```
 - set up database credentials inside knexFile.js
 
+- run migartion and seed
+
+```bash
+  npx knex migrate:latest 
+``` 
+
+```bash
+  npx knex seed:run 
+``` 
+
 - run server.js
 
 ```bash
@@ -47,6 +45,3 @@ the project use mysql but you can install other database driver to it here is th
 ```
 
 - you are good to go 😊 happy coding
-
-
-    
