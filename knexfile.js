@@ -9,7 +9,7 @@ module.exports = {
       port:process.env.DB_PORT,
       user: 'root',
       password: process.env.DB_PASSWORD,
-      database:'node_knex-starter',
+      database:'',
     },
     pool: {
       min: 0,
